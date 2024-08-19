@@ -1,9 +1,8 @@
 # Spring-boot-Rest
 API REST con persistencia de datos con Spring Data JPA. 
 
-*  Se debe crear una base de datos en MySQL de nombre rest_api_db.
-*  Script para correr en MySQL
-    *  CREATE DATABASE rest_api_db;
-    *  USE rest_api_db;
-*  Al correr el proyecto usará hibernate y JPA para creación de las tablas fabricantes y productos.
-*  Proyecto Dockerizado y conexión a MySQL también dockerizada, la conexión se realiza por medio de docker-compose 
+*  El proyecto está enfocado en el CRUD de fabricantes, el CRUD productos y el manejo de su relación uno a muchos. 
+*  En el proyecto se usa hibernate y JPA para la persistencia con la BBDD para la creación de las tablas fabricantes y productos.
+*  Se dockeriza el proyecto
+*  Se dockeriza MySQL
+*  La conexión del proyecto se ha hecho por medio de docker-compose 
