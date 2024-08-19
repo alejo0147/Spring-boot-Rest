@@ -11,6 +11,7 @@ COPY ./mvnw .
 
 # DESCARGAR LAS DEPENDENCIAS
 RUN ./mvnw dependency:go-offline
+# RUN ./mvnw clean package -Dmaven.test.skip -Dmaven.main.skip -Dspring-boot.repackage.skip && rm -r ./target/
 
 # COPIAR EL CÓDIGO FUENTE DENTRO DEL CONTENEDOR
 COPY ./src ./src

@@ -1,12 +1,10 @@
-version: '3.8'
-
 services:
   spring-api-image:
+    image: spring-api-image
+    container_name: spring-api-container
     build:
       context: .
       dockerfile: Dockerfile
-    image: spring-api-image
-    container_name: spring-api-container
     ports:
       - "8003:8003"
     networks:
@@ -19,7 +17,7 @@ services:
       SPRING_DATASOURCE_PASSWORD: 2007
 
   mysql:
-    image: mysql:latest
+    image: mysql
     container_name: mysql_database
     environment:
       MYSQL_ROOT_PASSWORD: 1986
@@ -27,14 +25,12 @@ services:
       MYSQL_USER: elnuevo
       MYSQL_PASSWORD: 2007
     ports:
-      - "3306:3306"
+      - "3307:3306"
     networks:
       - spring-network
     volumes:
       - mysql-volume:/var/lib/mysql
-
 networks:
   spring-network:
-
 volumes:
   mysql-volume:
